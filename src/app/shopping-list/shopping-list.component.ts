@@ -19,7 +19,6 @@ export class ShoppingListComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("loading shopping list component");
-
   }
 
 }

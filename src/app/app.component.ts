@@ -7,10 +7,10 @@ import { Component, Output } from '@angular/core';
 export class AppComponent {
     title ='application';
 
-   @Output() loadedFeature;
+   @Output() loadedFeature ;
 
    onNavigate(feature : string){
-       console.log(feature);
+    console.log(feature);
        this.loadedFeature= feature;
    }
 }
