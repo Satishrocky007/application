@@ -9,8 +9,8 @@ import { Ingredients } from '../shared/ingredients.nodel';
 export class ShoppingListComponent implements OnInit {
 
   ingredients :Ingredients[] =[
-    new Ingredients('TamatoReceipe',180) ,
-    new Ingredients('MuttonBiryani',250)
+    new Ingredients('Apple',100) ,
+    new Ingredients('Grapes',100)
   ];
 
   description=[];
@@ -18,6 +18,8 @@ export class ShoppingListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("loading shopping list component");
+
   }
 
 }

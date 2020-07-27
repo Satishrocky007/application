@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector:'./app-root',
+    templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'application';
+    title ='application';
+
+   @Output() loadedFeature;
+
+   onNavigate(feature : string){
+       console.log(feature);
+       this.loadedFeature= feature;
+   }
 }
