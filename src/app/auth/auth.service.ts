@@ -50,11 +50,8 @@ export class AuthService {
                     break;
             case 'INVALID_PASSWORD':
                     errorMessage='This Password is not correct';
-                    break;
-                
-                
-
-            }
+                    break; 
+                }
         return throwError(errorMessage);
     }
 }
