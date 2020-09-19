@@ -1,5 +1,6 @@
 import { Component, Output, OnInit } from '@angular/core';
 import { AuthService } from './auth/auth.service';
+import { LoggingService } from './loging.service';
 
 @Component({
     selector: './app-root',
@@ -7,7 +8,7 @@ import { AuthService } from './auth/auth.service';
 })
 export class AppComponent implements OnInit {
     title = 'application';
-    constructor(private authService:AuthService){}
+    constructor(private authService: AuthService, private loggingService: LoggingService) { }
 
     //    @Output() loadedFeature ;
 
@@ -18,6 +19,6 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.authService.autoLogin();
-
+        this.loggingService.printLog('hello from App-Component ng-Oninit');
     }
 }

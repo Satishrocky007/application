@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggingService } from '../loging.service';
 import { Ingredients } from '../shared/ingredient.model';
 import { ShoppingListService } from './shopping.-list.service';
 
@@ -14,7 +15,7 @@ export class ShoppingListComponent implements OnInit {
 
   description = [];
 
-  constructor(private shoppingListService: ShoppingListService) { }
+  constructor(private shoppingListService: ShoppingListService, private loggingService :LoggingService) { }
 
   ngOnInit(): void {
     console.log("loading shopping list component");
@@ -24,7 +25,7 @@ export class ShoppingListComponent implements OnInit {
         this.ingredients = ingredients;
       }
     );
-
+    this.loggingService.printLog('hello from Shopping-Listng-Component ng-Oninit');
   }
 
   onEditItem(index: number) {
