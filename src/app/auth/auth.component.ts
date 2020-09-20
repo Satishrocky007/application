@@ -42,6 +42,7 @@ export class AuthComponent implements OnDestroy {
         let authObs: Observable<AuthResponseData>;
 
         if (this.isLoginMode) {
+            this.isLoading = true;
             authObs = this.authservice.login(email, password);
         } else {
             this.isLoading = true;
